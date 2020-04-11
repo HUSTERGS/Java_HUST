@@ -16,12 +16,18 @@ public class IndexBuilder extends AbstractIndexBuilder {
     }
 
     @Override
-    public AbstractIndex buildIndex(String rootDirectory) throws IOException {
+    public AbstractIndex buildIndex(String rootDirectory) {
         AbstractIndex index = new Index();
         List<String> filePaths = FileUtil.list(rootDirectory);
+        // 对文件名排一下序
         filePaths.sort(String::compareTo);
         for (String docPath : filePaths) {
-            AbstractDocument document = new DocumentBuilder().build(docId, docPath, new File(docPath));
+            AbstractDocument document = null;
+            try {
+                document = docBuilder.build(docId, docPath, new File(docPath));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             index.addDocument(document);
             docId += 1;
         }

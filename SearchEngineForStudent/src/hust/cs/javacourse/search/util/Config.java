@@ -34,7 +34,7 @@ public class Config {
      * </pre>
      *
      */
-    public static String DOC_DIR  = PROJECT_HOME_DIR + "/text/真实测试数据集/";
+    public static String DOC_DIR  = PROJECT_HOME_DIR + "/text/text_search_sort/";
 
     /**
      * 构建索引和检索时是否忽略单词大小写

@@ -40,6 +40,7 @@ public class TermTupleScanner extends AbstractTermTupleScanner {
             StringSplitter splitter = new StringSplitter();
             splitter.setSplitRegex(Config.STRING_SPLITTER_REGEX);
             for (String word : splitter.splitByRegex(string)) {
+//                System.out.println("正在测试: " + word + "\n");
                 TermTuple tt = new TermTuple();
                 tt.curPos = pos;
                 // 是否忽略大小写

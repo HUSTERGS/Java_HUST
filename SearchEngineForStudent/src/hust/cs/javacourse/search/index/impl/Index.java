@@ -9,6 +9,10 @@ import java.util.*;
  * AbstractIndex的具体实现类
  */
 public class Index extends AbstractIndex {
+
+    public Index(){}
+
+
     /**
      * 返回索引的字符串表示
      *
@@ -183,7 +187,6 @@ public class Index extends AbstractIndex {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
     /**
@@ -210,6 +213,7 @@ public class Index extends AbstractIndex {
                 postingList.readObject(in);
                 termToPostingListMapping.put(term, postingList);
             }
+
         } catch (IOException | ClassNotFoundException e) {
             e.printStackTrace();
         }

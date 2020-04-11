@@ -20,8 +20,11 @@ public class SimpleSorter implements Sort {
     public double score(AbstractHit hit) {
         double s = 0;
         for (Map.Entry<AbstractTerm, AbstractPosting> entry : hit.getTermPostingMapping().entrySet()) {
-            s += entry.getValue().getFreq();
+            if (entry.getValue() != null) {
+                s += entry.getValue().getFreq();
+            }
         }
-        return s;
+        // 分数倒置
+        return -s;
     }
 }

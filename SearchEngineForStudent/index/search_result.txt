@@ -1,33 +1,36 @@
 
 --------------------------------------
 
-docId: 6
+docId: 2
 
-docPath: /home/samuel/大三下/Java/Java新实验一/SearchEngineForStudent/text/真实测试数据集/15.txt
+docPath: /home/samuel/大三下/Java/Java新实验一/SearchEngineForStudent/text/text_search_sort/2.txt
 
-content: The release of the new James Bond film has been put back by seven months as coronavirus continues to spread.
-The producers said they had moved the release of No Time To Die from April to November after "careful consideration and thorough evaluation of the global theatrical marketplace".
-The announcement comes days after the founders of two 007 fan sites called on the film studios to delay its release.
+content: The release of the new James Bond film coronavirus death continue to spread England Government
 
 score: 1.0
 
-coronavirus	---->	{ docId: 6, freq: 1, positions: [16] }
+government	---->	{ docId: 2, freq: 1, positions: [14] }
+
 --------------------------------------
 
 docId: 0
 
-docPath: /home/samuel/大三下/Java/Java新实验一/SearchEngineForStudent/text/真实测试数据集/1.txt
+docPath: /home/samuel/大三下/Java/Java新实验一/SearchEngineForStudent/text/text_search_sort/3.txt
 
-content: The novel coronavirus death toll has reached 21 as of Saturday in Britain as the number of confirmed cases totalled 1,140, according to the latest figures released by the British Department of Health and Social Care.
-
-The new figures showed an increase of 342 confirmed COVID-19 cases in Britain, the largest rise on a single day since the start of the outbreak in the country. Ten more patients who contracted coronavirus died, bringing the death toll in Britain to 21.
-
-All the 10 patients who died were aged over 60 and had underlying health conditions, said Chris Whitty, chief medical officer for England.
-
-According to health authorities, most of the cases are in England. There have been 121 confirmed cases in Scotland, 60 in Wales and 34 in Northern Ireland.
-
-The British government said on Friday that it estimated the true number of infected cases in Britain to be around 5,000 to 10,000. People who are self-isolating with mild symptoms are no longer being tested for the virus.
+content: The England Government want to establish the country as a visitor destination for Chinese Government people as part of  new strategy to boost trade rate
 
 score: 2.0
 
-coronavirus	---->	{ docId: 0, freq: 2, positions: [2, 71] }
+government	---->	{ docId: 0, freq: 2, positions: [2, 14] }
+
+--------------------------------------
+
+docId: 1
+
+docPath: /home/samuel/大三下/Java/Java新实验一/SearchEngineForStudent/text/text_search_sort/1.txt
+
+content: The novel coronavirus death rate According to Government health authority of England Government, most of the coronavirus cases are in England Government
+
+score: 3.0
+
+government	---->	{ docId: 1, freq: 3, positions: [7, 12, 21] }

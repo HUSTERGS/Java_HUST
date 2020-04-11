@@ -28,7 +28,8 @@ public class TestSearchIndex {
 
         AbstractIndexSearcher searcher = new IndexSearcher();
         searcher.open(indexFile);
-        AbstractHit[] hits = searcher.search(new Term("coronavirus"), simpleSorter);
+        AbstractHit[] hits = searcher.search(new Term("government"), simpleSorter);
+
         // 将搜索结果以文本形式保存
         try {
             BufferedWriter writer = new BufferedWriter(new FileWriter(new File(searchResultTargetFile)));
@@ -40,6 +41,5 @@ public class TestSearchIndex {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }

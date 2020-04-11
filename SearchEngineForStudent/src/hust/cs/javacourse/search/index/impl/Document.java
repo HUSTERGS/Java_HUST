@@ -5,8 +5,12 @@ import hust.cs.javacourse.search.index.AbstractTermTuple;
 import java.util.List;
 
 public class Document extends AbstractDocument {
+    public Document(){}
     public Document(int docId, String docPath){
         super(docId, docPath);
+    }
+    public Document(int docId, String docPath,List<AbstractTermTuple> tuples){
+        super(docId, docPath, tuples);
     }
 
     @Override
