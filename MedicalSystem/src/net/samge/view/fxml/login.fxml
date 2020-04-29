@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane fx:id="main" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.samge.view.controller.LoginController">
+   <children>
+      <Button fx:id="patient" layoutX="224.0" layoutY="67.0" mnemonicParsing="false" onAction="#PatientLogin" prefHeight="62.0" prefWidth="153.0" text="病人登录">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="doctor" layoutX="224.0" layoutY="163.0" mnemonicParsing="false" onAction="#DoctorLogin" prefHeight="62.0" prefWidth="153.0" text="医生登录">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+      <Button fx:id="exit" layoutX="224.0" layoutY="267.0" mnemonicParsing="false" onAction="#Exit" prefHeight="62.0" prefWidth="153.0" text="退出">
+         <font>
+            <Font size="21.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
