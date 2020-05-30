@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane fx:id="main" dividerPositions="0.20351758793969849" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.samge.view.controller.PatientRegisterController">
+    <items>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <Label layoutX="237.0" layoutY="25.0" prefHeight="28.0" prefWidth="124.0" text="门 诊 挂 号" textFill="#5c0a41">
+                    <font>
+                        <Font name="Arial" size="24.0" />
+                    </font>
+                </Label>
+            <Text layoutX="436.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="当前用户:" />
+            <Text fx:id="currentUserName" layoutX="507.0" layoutY="18.0" strokeType="OUTSIDE" strokeWidth="0.0" text="anonymous" />
+            <Text layoutX="436.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="患者编号:" />
+            <Text fx:id="currentUserNo" layoutX="507.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="anonymous" />
+            <Text layoutX="436.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="账户余额:" />
+            <Text fx:id="remainBalance" layoutX="507.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+            </children>
+        </AnchorPane>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+            <children>
+                <Label layoutX="64.0" layoutY="81.0" text="号种类别">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="321.0" layoutY="81.0" text="号种名称">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="322.0" layoutY="128.0" text="应缴金额">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="regFee" editable="false" layoutX="386.0" layoutY="124.0" />
+                <Label layoutX="64.0" layoutY="128.0" text="交款金额">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="actualPay" layoutX="129.0" layoutY="124.0" />
+                <TextField fx:id="changeMoney" editable="false" layoutX="129.0" layoutY="165.0" />
+                <Label layoutX="64.0" layoutY="169.0" text="找零金额">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="321.0" layoutY="169.0" text="挂号号码">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="regNum" editable="false" layoutX="386.0" layoutY="165.0" />
+                <Label layoutX="64.0" layoutY="36.0" text="科室名称">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Label layoutX="322.0" layoutY="36.0" text="医生姓名">
+                    <font>
+                        <Font name="Arial Bold" size="15.0" />
+                    </font>
+                </Label>
+                <Button fx:id="confirmButton" layoutX="176.0" layoutY="249.0" mnemonicParsing="false" text="确定">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="clearButton" layoutX="272.0" layoutY="249.0" mnemonicParsing="false" onAction="#clear" text="清除">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <Button fx:id="exitButton" layoutX="365.0" layoutY="249.0" mnemonicParsing="false" onAction="#exit" text="退出">
+                    <font>
+                        <Font name="System Bold" size="15.0" />
+                    </font>
+                </Button>
+                <ComboBox fx:id="catName" editable="true" layoutX="385.0" layoutY="78.0" onAction="#catNameSelect" prefHeight="28.0" prefWidth="162.0" />
+                <ComboBox fx:id="depName" editable="true" layoutX="128.0" layoutY="33.0" onAction="#depNameSelect" prefHeight="28.0" prefWidth="162.0" />
+                <ComboBox fx:id="regCat" editable="true" layoutX="126.0" layoutY="78.0" prefHeight="28.0" prefWidth="162.0" />
+                <ComboBox fx:id="docName" editable="true" layoutX="385.0" layoutY="33.0" onAction="#docNameSelect" prefHeight="28.0" prefWidth="162.0" />
+                <Text id="prompt" fx:id="prompt" fill="RED" layoutX="208.0" layoutY="221.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="181.13000106811523">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Text>
+            </children>
+        </AnchorPane>
+    </items>
+</SplitPane>

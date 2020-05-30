@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.samge.view.controller.PatientLoginController">
+   <children>
+      <PasswordField fx:id="password" layoutX="219.0" layoutY="215.0" prefHeight="26.0" prefWidth="169.0" promptText="请输入密码" />
+      <TextField fx:id="pid" layoutX="219.0" layoutY="172.0" prefHeight="26.0" prefWidth="169.0" promptText="请输入患者编号" />
+      <Text layoutX="152.0" layoutY="190.0" strokeType="OUTSIDE" strokeWidth="0.0" text="患者编号" wrappingWidth="60.130001068115234" />
+      <Text layoutX="152.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="密码" textAlignment="CENTER" wrappingWidth="43.1300014257431" />
+      <Text fx:id="usernamePrompt" fill="RED" layoutX="408.0" layoutY="191.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text fx:id="passwordPrompt" fill="RED" layoutX="408.0" layoutY="234.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Button fx:id="LoginButton" layoutX="219.0" layoutY="263.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0" text="登录" textAlignment="CENTER" textOverrun="CLIP" />
+      <Button fx:id="CancelButton" layoutX="317.0" layoutY="263.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="70.0" text="取消" />
+      <Text layoutX="249.0" layoutY="132.0" lineSpacing="10.0" strokeType="OUTSIDE" strokeWidth="0.0" text="患者登录" wrappingWidth="103.0">
+         <font>
+            <Font size="24.0" />
+         </font></Text>
+   </children>
+</AnchorPane>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="main" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.samge.view.controller.DoctorPanelController">
+   <children>
+      <TabPane layoutY="1.0" prefHeight="393.0" prefWidth="600.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="tabPatient" text="病人列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="patientTable" layoutY="46.0" prefHeight="314.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn editable="false" prefWidth="75.0" text="挂号编号" />
+                            <TableColumn editable="false" prefWidth="75.0" text="病人名称" />
+                              <TableColumn editable="false" prefWidth="164.0" text="挂号日期时间" />
+                              <TableColumn editable="false" prefWidth="87.0" text="号种类别" />
+                          </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="tabIncome" text="收入列表">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <TableView fx:id="incomeTable" layoutY="38.0" prefHeight="323.0" prefWidth="600.0">
+                          <columns>
+                            <TableColumn prefWidth="75.0" text="科室名称" />
+                            <TableColumn prefWidth="75.0" text="医生编号" />
+                              <TableColumn prefWidth="75.0" text="医生名称" />
+                              <TableColumn prefWidth="75.0" text="号种类别" />
+                              <TableColumn prefWidth="75.0" text="挂号人次" />
+                              <TableColumn prefWidth="75.0" text="收入合计" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="14.0" layoutY="23.0" strokeType="OUTSIDE" strokeWidth="0.0" text="起始时间" />
+                        <DatePicker fx:id="startTime" layoutX="70.0" layoutY="4.0" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+      <Button fx:id="exitButton" layoutX="550.0" layoutY="3.0" mnemonicParsing="false" text="退出" />
+      <Text layoutX="300.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="当前用户:" />
+      <Text fx:id="docNo" layoutX="210.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="anonymous" />
+      <Text layoutX="150.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="医生编号:" />
+      <Text fx:id="docName" layoutX="360.0" layoutY="25.0" strokeType="OUTSIDE" strokeWidth="0.0" text="anonymous" />
+   </children>
+</AnchorPane>
